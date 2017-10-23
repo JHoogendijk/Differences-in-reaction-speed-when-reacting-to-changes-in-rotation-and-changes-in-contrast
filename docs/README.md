@@ -9,5 +9,5 @@ This software was written as part of a research project done as an assignment fo
 - Run the program by either:
   - Installing the app on a webserver. See: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
   - Running the app with flask:
-    - ‘export FLASK_APP=__init__.py‘
+    - ‘export FLASK_APP=\_\_init\_\_.py‘
     - ‘flask run‘
