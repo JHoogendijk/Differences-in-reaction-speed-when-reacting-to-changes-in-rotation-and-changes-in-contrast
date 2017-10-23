@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title></title>
+        <script src="js/app"></script>
+        <script>
+            window.onload = function() {
+                var app = new App();
+                app.start();
+            };
+        </script>
+    </head>
+    <body style="text-align: center">
+        <div id="welcome" style="width: 950px;text-align: center;margin: auto;">
+            <p>
+                Thank you for taking the time to take our survey!<br>
+                This survey consists out of 10 questions in which the goal is to find the difference between two pictures, shown in quick succession.<br>
+                Please answer as quick as possible when you notice the difference, we will be using reaction time as part of our research.<br>
+                <b>IMPORTANT: Please turn off applications that alter the colour of your screen! (Night Shift, Flux, etc)</b><br>
+                <br>
+                <i>ABOUT US</i><br>
+                We are 5 students from the University of Utrecht studying Artificial Intelligence.<br>
+                This survey is for our research into visual memory and what has effect on it.<br>
+                <br>
+                <i>CONSENT</i><br>
+                You are not in any way forced to partake in this research.<br>
+                You may stop partaking at any time if you wish to do so.<br>
+                The results of this research will be used for scientific purposes, we will not disclose personal information.<br>
+                By continuing the research by pressing the button below, you acknowledge that you have read and agree with the statements above.
+            </p>
+            <button id="to_information_form">Next</button>
+        </div>
+        <div id="information_form" style="display: none;width: 700px;margin: auto;">
+            <p>
+                You will now answer several questions regarding your device, age and gender.
+                We will use this data to rule out correlations between gender or age and to group data based on the types of monitors.
+            </p>
+            <form>
+                <span>Gender:</span><br>
+                <select id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select><br>
+                <span>Age:</span><br>
+                <input type="number" name="age" id="age" value=""><br>
+                <span>Monitor model:</span><br>
+                <input type="text" name="monitor" id="monitor" value="" />
+            </form>
+            <button id="to_information">Next</button><br>
+            <span id="oops" style="visibility: hidden;color: red;">Check your input and try again!</span>
+        </div>
+        <div id="information" style="display: none;width: 800px;margin: auto;">
+            <p>
+                In the next step you will see images with rectangles on them.<br>
+                First the original image will show. Next you will see a white screen. After that a screen with an altered image.<br>
+                If you spot the change in the image you will have to press the space bar. <br>
+                You will then have to click on the change to verify your answer.<br>
+                The step will consist of 10 questions.<br>
+                <br>
+                Good luck!
+            </p>
+            <button id="to_experiment">Next</button>
+        </div>
+        <div id="experiment" style="display: none">
+            <p id="message" style="visibility: hidden">Please wait for the image and click on the changing element</p>
+            <canvas id="canvas" width="600" height="500" style="border:1px solid #000000;margin:auto;display:block">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+        </div>
+        <div id="finished" style="display: none;width:500px;margin: auto;">
+            <p>
+                Thank you for joining this experiment.<br>
+                You scored higher than <span id="percentile"></span>&#37; of participants.
+            </p>
+        </div>
+    </body>
+</html>
