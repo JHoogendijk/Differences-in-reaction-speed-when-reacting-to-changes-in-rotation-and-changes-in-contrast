@@ -84,21 +84,3 @@ var rectangles = generateRandomRectangles()
 console.log(createStringForRectangles(rectangles))
 console.log(rectangles)
 drawRectangles(rectangles)
-
-<VirtualHost *:80>
-		ServerName experiment.mijnwolken.nl
-		ServerAdmin admin@mijnwolken.nl
-		WSGIScriptAlias / /var/www/experiment/experiment.wsgi
-		<Directory /var/www/experiment/experiment/>
-			Order allow,deny
-			Allow from all
-		</Directory>
-		Alias /static /var/www/experiment/experiment/static
-		<Directory /var/www/experiment/experiment/static/>
-			Order allow,deny
-			Allow from all
-		</Directory>
-		ErrorLog ${APACHE_LOG_DIR}/error.log
-		LogLevel warn
-		CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
