@@ -1,9 +1,9 @@
 # Differences-in-reaction-speed-when-reacting-to-changes-in-rotation-and-changes-in-contrast
 
-#Purpose
+## Purpose
 This software was written as part of a research project done as an assignment for Utrecht University.
 
-#Installation
+## Installation
 - Pull the repository
 - Install the dependencies by running ‘pip install -r requirements.txt‘
 - Run the program by either:
